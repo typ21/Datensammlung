@@ -5,12 +5,14 @@ import javax.swing.JFrame;
 public class Gui {
 
 	private JFrame frame;
+	private Information[] informations;
 
-	public static void start() {
+	public static void start(Information[] informations) {
+
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Gui window = new Gui();
+					Gui window = new Gui(informations);
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -19,7 +21,8 @@ public class Gui {
 		});
 	}
 
-	public Gui() {
+	private Gui(Information[] infomations) {
+		this.informations = informations;
 		initialize();
 	}
 
