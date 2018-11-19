@@ -1,6 +1,6 @@
 
 public class Program {
-	private Category[] categories;
+	private Category[] categories = new Category[1];
 	private int categoryCounter = 0;
 
 	private Information[] informations;
@@ -15,7 +15,7 @@ public class Program {
 	 */
 	private void initialize() {
 		// TODO read from Database if wanted(let user choose between NEW and IMPORT
-		Gui.start(informations);
+		Gui.start(informations, categories);
 	}
 
 	/**
@@ -29,6 +29,9 @@ public class Program {
 
 		categories[categoryCounter].setLenght(lenght);
 		categories[categoryCounter].setName(name);
+
+		// increase the size of categories
+		this.increaseCategoryLenght(1);
 	}
 
 	/**
@@ -36,8 +39,27 @@ public class Program {
 	 * 
 	 * @param
 	 */
-	public void newInformation(Category category) {
-		informations[informationCounter] = new Information(category);
+	public void newInformation(Category category, String[] text) {
+		informations[informationCounter] = new Information(category, text);
 		informationCounter++;
+		
+		//increase the size of categories
+		this.increaseInformationLenght(1);
+	}
+
+	private void increaseCategoryLenght(int increaseSize) {
+		Category[] tempCategoryArr = new Category[categories.length + increaseSize];
+		for (int i = 0; i <= categories.length; i++) {
+			categories[i] = tempCategoryArr[i];
+		}
+		this.categories = tempCategoryArr;
+	}
+
+	private void increaseInformationLenght(int increaseSize) {
+		Information[] tempInformationsArr = new Information[informations.length + increaseSize];
+		for (int i = 0; i <= informations.length; i++) {
+			this.informations[i] = tempInformationsArr[i];
+		}
+		this.informations = tempInformationsArr;
 	}
 }
