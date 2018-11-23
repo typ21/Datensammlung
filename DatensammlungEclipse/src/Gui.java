@@ -5,11 +5,12 @@ import javax.swing.JFrame;
 public class Gui {
 
 	private JFrame frame;
-	
+
 	@SuppressWarnings("unused")
 	private Information[] informations;
 	@SuppressWarnings("unused")
 	private Category[] categories;
+
 	public static void start(Information[] informations, Category[] categories) {
 
 		EventQueue.invokeLater(new Runnable() {

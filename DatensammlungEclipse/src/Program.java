@@ -1,5 +1,5 @@
-
 public class Program {
+
 	private Category[] categories = new Category[1];
 	private int categoryCounter = 0;
 
@@ -42,8 +42,8 @@ public class Program {
 	public void newInformation(Category category, String[] text) {
 		informations[informationCounter] = new Information(category, text);
 		informationCounter++;
-		
-		//increase the size of categories
+
+		// increase the size of categories
 		this.increaseInformationLenght(1);
 	}
 

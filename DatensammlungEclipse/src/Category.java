@@ -1,5 +1,5 @@
-
 public class Category {
+
 	private int lenght;
 	private String name;
 
