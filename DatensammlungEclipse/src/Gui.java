@@ -6,7 +6,9 @@ public class Gui {
 
 	private JFrame frame;
 	
+	@SuppressWarnings("unused")
 	private Information[] informations;
+	@SuppressWarnings("unused")
 	private Category[] categories;
 	public static void start(Information[] informations, Category[] categories) {
 
@@ -22,7 +24,7 @@ public class Gui {
 		});
 	}
 
-	private Gui(Information[] infomations, Category[] categories) {
+	private Gui(Information[] informations, Category[] categories) {
 		this.informations = informations;
 		this.categories = categories;
 		initialize();
