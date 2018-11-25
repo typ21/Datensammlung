@@ -1,0 +1,64 @@
+functionswise of the array:
+information to transfer:
+- big Header coming from category
+- header
+- text
+- picture link
+- seperationl lines
+
+how the information is stored:
+- we use countes for diffrent types of information followed by 
+the information
+
+assignment of counts and information explained in an example:
+code:
+String[] text = new String[888];
+text[0] = "0";
+text[1] = "Person";
+text[2] = "1";
+text[3] = "Name";
+text[4] = "2";
+text[5] = "Michael Johansen";
+text[6] = "1";
+text[7] = "Picture";
+text[8] = "3";
+text[9] = "/root/Pictures/PictureOfMichaelJohansen.jpg";
+text[10] = "1";
+text[11] = "Character traits";
+text[12] = "2";
+text[13] = "he is a fucking nigger \n he is very nice";
+
+output in console(cound be improved in gui):
+Person	//font family and settings of big header
+-------------------------------------------------
+Name	//font family and setting of small header
+-------------------------------------------------
+Michael Johansen	//font family and settings of usual text
+-------------------------------------------------
+Picture	//font family and setting of small header
+-------------------------------------------------
+            (.,------...__
+         _.'"             `.
+       .'  .'   `, `. `.    `
+      . .'   .'/''--...__`.  \
+     . .--.`.  ' "-.     '.  |
+     ''  .'  _.' .())  .--":/
+     ''(  \_\      '   (()(
+     ''._'          (   \ '
+     ' `.            `--'  '
+      `.:    .   `-.___.'  '
+       `.     .    _  _  .'
+         )       .____.-'
+       .'`.        (--..
+     .' \  /\      / /  `.
+   .'    \(  \    /|/     `.
+ .'           \__/          `.
+/      |        o      |      \
+       |               |      |
+-------------------------------------------------
+Character traits	//font family and setting of small header
+-------------------------------------------------
+he is a fucking nigger
+he is very nice
+
+
